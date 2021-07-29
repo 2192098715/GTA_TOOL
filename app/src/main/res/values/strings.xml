@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">牛马GTA工具箱</string>
+    <string name="activity_main_button1">安装游戏</string>
+    <string name="activity_main_button2">教程</string>
+    <string name="activity_main_button3">进群</string>
+    <string name="activity_main_button4">零花钱</string>
+    <string name="activity_main_button5">免费专区</string>
+    <string name="activity_main_button6">会员专区</string>
+    <string name="activity_main_button7">最新活动</string>
+    <string name="activity_main_button8">最新推荐</string>
 </resources>
