@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreeActivity">
+
+    <Button
+        android:id="@+id/free_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/activity_free_button1"
+        app:layout_constraintBottom_toTopOf="@+id/free_button2"
+        app:layout_constraintEnd_toEndOf="@+id/free_button2"
+        app:layout_constraintStart_toStartOf="@+id/free_button2" />
+
+    <Button
+        android:id="@+id/free_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/activity_free_button2"
+        app:layout_constraintBottom_toTopOf="@+id/free_button3"
+        app:layout_constraintEnd_toEndOf="@+id/free_button3"
+        app:layout_constraintStart_toStartOf="@+id/free_button3" />
+
+    <Button
+        android:id="@+id/free_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/activity_free_button3"
+        app:layout_constraintBottom_toTopOf="@+id/free_button4"
+        app:layout_constraintEnd_toEndOf="@+id/free_button4"
+        app:layout_constraintStart_toStartOf="@+id/free_button4" />
+
+    <Button
+        android:id="@+id/free_button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/activity_free_button4"
+        app:layout_constraintBottom_toTopOf="@+id/free_button5"
+        app:layout_constraintEnd_toEndOf="@+id/free_button5"
+        app:layout_constraintStart_toStartOf="@+id/free_button5" />
+
+    <Button
+        android:id="@+id/free_button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/activity_free_button5"
+        app:layout_constraintBottom_toTopOf="@+id/free_button6"
+        app:layout_constraintEnd_toEndOf="@+id/free_button6"
+        app:layout_constraintStart_toStartOf="@+id/free_button6" />
+
+    <Button
+        android:id="@+id/free_button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_free_button6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/free_button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_free_button7"
+        app:layout_constraintEnd_toEndOf="@+id/free_button6"
+        app:layout_constraintStart_toStartOf="@+id/free_button6"
+        app:layout_constraintTop_toBottomOf="@+id/free_button6" />
+
+    <Button
+        android:id="@+id/free_button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_free_button8"
+        app:layout_constraintEnd_toEndOf="@+id/free_button7"
+        app:layout_constraintStart_toStartOf="@+id/free_button7"
+        app:layout_constraintTop_toBottomOf="@+id/free_button7" />
+
+    <Button
+        android:id="@+id/free_button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_free_button9"
+        app:layout_constraintEnd_toEndOf="@+id/free_button8"
+        app:layout_constraintStart_toStartOf="@+id/free_button8"
+        app:layout_constraintTop_toBottomOf="@+id/free_button8" />
+
+    <Button
+        android:id="@+id/free_button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_free_button10"
+        app:layout_constraintEnd_toEndOf="@+id/free_button9"
+        app:layout_constraintStart_toStartOf="@+id/free_button9"
+        app:layout_constraintTop_toBottomOf="@+id/free_button9" />
+
+    <Button
+        android:id="@+id/free_button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_free_button11"
+        app:layout_constraintEnd_toEndOf="@+id/free_button10"
+        app:layout_constraintStart_toStartOf="@+id/free_button10"
+        app:layout_constraintTop_toBottomOf="@+id/free_button10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

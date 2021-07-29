@@ -8,4 +8,17 @@
     <string name="activity_main_button6">会员专区</string>
     <string name="activity_main_button7">最新活动</string>
     <string name="activity_main_button8">最新推荐</string>
+    <string name="activity_main_snackbar1">暂未开放！</string>
+
+    <string name="activity_free_button1">神刀</string>
+    <string name="activity_free_button2">召唤神剑</string>
+    <string name="activity_free_button3">手电筒</string>
+    <string name="activity_free_button4">不会犯罪</string>
+    <string name="activity_free_button5">主角无敌</string>
+    <string name="activity_free_button6">金钱全满</string>
+    <string name="activity_free_button7">绿色按钮</string>
+    <string name="activity_free_button8">自动驾驶</string>
+    <string name="activity_free_button9">视频教程</string>
+    <string name="activity_free_button10">游戏安装</string>
+    <string name="activity_free_button11">清除已加入技能</string>
 </resources>
