@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                     findViewById(R.id.main_button1),
                     R.string.activity_main_snackbar1,
                     Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //教程按钮
         val button2:Button = findViewById(R.id.main_button2)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 findViewById(R.id.main_button2),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //进群按钮
         val button3:Button = findViewById(R.id.main_button3)

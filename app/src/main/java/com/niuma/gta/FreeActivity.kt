@@ -18,7 +18,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button1),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //召唤神剑
         val button2: Button = findViewById(R.id.free_button2)
@@ -27,7 +27,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button2),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //手电筒
         val button3: Button = findViewById(R.id.free_button3)
@@ -36,7 +36,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button3),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //不会犯罪
         val button4: Button = findViewById(R.id.free_button4)
@@ -45,7 +45,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button4),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //主角无敌
         val button5: Button = findViewById(R.id.free_button5)
@@ -54,7 +54,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button5),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //金钱全满
         val button6: Button = findViewById(R.id.free_button6)
@@ -63,7 +63,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button6),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //绿色按钮
         val button7: Button = findViewById(R.id.free_button7)
@@ -72,7 +72,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button7),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //自动驾驶
         val button8: Button = findViewById(R.id.free_button8)
@@ -81,7 +81,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button8),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //视频教程
         val button9: Button = findViewById(R.id.free_button9)
@@ -90,7 +90,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button9),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //游戏安装
         val button10: Button = findViewById(R.id.free_button10)
@@ -99,7 +99,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button10),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
         //清除已加入技能
         val button11: Button = findViewById(R.id.free_button11)
@@ -108,7 +108,7 @@ class FreeActivity : AppCompatActivity() {
                 findViewById(R.id.free_button11),
                 R.string.activity_main_snackbar1,
                 Snackbar.LENGTH_SHORT
-            )
+            ).show()
         }
     }
 }
