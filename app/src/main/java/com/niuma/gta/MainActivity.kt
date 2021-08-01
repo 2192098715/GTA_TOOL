@@ -1,11 +1,14 @@
 package com.niuma.gta
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +16,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //权限请求
+        PermissionUtils.needPermission(
+            this, arrayOf(
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.READ_PHONE_STATE,
+                Manifest.permission.ACCESS_WIFI_STATE
+            )
+        )
         //安装游戏按钮
         val button1: Button = findViewById(R.id.main_button1)
         button1.setOnClickListener {
@@ -88,5 +102,15 @@ class MainActivity : AppCompatActivity() {
         }catch (e: Exception){
             false
         }
+    }
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        PermissionUtils.onRequestPermissionsResult(requestCode, permissions, grantResults,
+            success = {
+                Toast.makeText(this, "请求成功", Toast.LENGTH_SHORT).show()
+            },
+            fail = {
+                Toast.makeText(this, "${it}请求失败", Toast.LENGTH_SHORT).show()
+            })
     }
 }
