@@ -9,6 +9,7 @@
     <string name="activity_main_button7">最新活动</string>
     <string name="activity_main_button8">最新推荐</string>
     <string name="activity_main_button9">文件访问授权</string>
+    <string name="activity_main_button10">全部文件权限申请</string>
     <string name="activity_main_snackbar1">暂未开放！</string>
 
     <string name="activity_free_button1">神刀</string>

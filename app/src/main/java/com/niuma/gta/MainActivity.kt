@@ -2,26 +2,25 @@ package com.niuma.gta
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.DocumentsContract
 import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.documentfile.provider.DocumentFile
 import com.google.android.material.snackbar.Snackbar
 import com.permissionx.guolindev.PermissionX
 
 class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.R)
+    var requestAllFileCode: Int = 65
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val dataTools = dataTools(this,11)
         //权限请求
         PermissionX.init(this)
             .permissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -99,19 +98,31 @@ class MainActivity : AppCompatActivity() {
         //文件授权按钮
         val button9: Button = findViewById(R.id.main_button9)
         button9.setOnClickListener {
-            //直接获取data权限，推荐使用这种方案
-            val uri1: Uri =
-                Uri.parse("content://com.android.externalstorage.documents/tree/primary%3AAndroid%2Fdata")
-            val documentFile: DocumentFile? = DocumentFile.fromTreeUri(this, uri1);
-            val uri2: Uri =
-                Uri.parse(documentFile.toString())
-            val intent1 = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-            intent1.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION
-                    or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-                    or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION
-                    or Intent.FLAG_GRANT_PREFIX_URI_PERMISSION)
-                intent1.putExtra(DocumentsContract.EXTRA_INITIAL_URI, uri2)
-            startActivityForResult(intent1, 11)
+            dataTools.requestPermission();//申请权限
+        }
+        //全部文件权限申请按钮
+        val button10: Button = findViewById(R.id.main_button10)
+        button10.setOnClickListener {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
+                Toast.makeText(this@MainActivity,"当前设备不是android11无法申请",Toast.LENGTH_SHORT).show();
+            }
+            if (dataTools.isAllFilePermission()){
+                Toast.makeText(this@MainActivity,"权限已获取",Toast.LENGTH_SHORT).show();
+            }else{
+                dataTools.requestAllFilePermission(requestAllFileCode);
+            }
+        }
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val dataTools = dataTools(this,11)
+        dataTools.savePermissions(requestCode, resultCode, data) //保存权限
+        if (requestCode == requestAllFileCode) {
+            if (dataTools.isAllFilePermission()) {
+                Toast.makeText(this@MainActivity, "全部文件读写权限已成功获取", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this@MainActivity, "您未授权全部文件读写权限", Toast.LENGTH_SHORT).show()
+            }
         }
     }
     /****************
